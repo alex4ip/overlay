@@ -1,0 +1,6 @@
+# Calculate format=kernel name=.config os_install_arch_machine==x86_64&&merge(sys-kernel/calculate-sources)>=4.2
+CONFIG_DEFAULT_CFQ=y
+CONFIG_DEFAULT_IOSCHED="cfq"
+!CONFIG_BFQ_GROUP_IOSCHED=
+!CONFIG_DEFAULT_BFQ=
+!CONFIG_IOSCHED_BFQ=

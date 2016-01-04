@@ -1,0 +1,40 @@
+=net-misc/openssh-7.1_p1-r2
+
+# not compiled
+=dev-ml/lablgtk-2.18.3
+
+# without the patch does not allow to work with certificates correctly
+<dev-python/m2crypto-0.22.3-r9
+
+# mask portage wgetpaste
+>app-text/wgetpaste-2.25-r4
+
+# package above 2.0 has not calculate patches
+>sys-boot/grub-2.02_beta2-r3
+
+# requires python3
+>=app-misc/media-player-info-21
+
+# does not work with calculate-core
+~dev-python/cherrypy-3.3.0
+
+# not checked
+>=sys-kernel/dracut-041
+
+# upower-pm-utils better
+sys-power/upower
+
+# don't support sdb-ldap
+=net-dns/bind-9.10.2_p4
+=net-dns/bind-tools-9.10.2_p4
+
+# deprecated, will be removed soon
+sys-apps/calculate-builder
+sys-apps/calculate-assemble
+sys-apps/calculate-lib:2.2
+
+# deprecated, calculate-server is separate package now
+sys-apps/calculate-utils:0
+
+# not compiled media-libs/libgpod-0.8.3 with this version in chroot
+=dev-lang/swig-3.0.5

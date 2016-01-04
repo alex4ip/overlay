@@ -1,0 +1,67 @@
+# required by sys-apps/calculate-lib [python]
+sys-apps/file python
+
+
+# Removed unnecessary dependence
+sys-apps/man-db -nls
+sys-fs/lvm2 -thin
+
+
+# Сompile the kernel during the installation package
+sys-kernel/calculate-sources firmware minimal symlink vmlinuz
+
+# Add NTFS and Reiserfs support
+app-admin/testdisk ntfs reiserfs
+
+# Include internal version of ntfsprogs.
+sys-fs/ntfs3g ntfsprogs
+
+# for support .ko.xz modules
+sys-apps/kmod lzma
+
+# Support for LZMA
+sys-fs/squashfs-tools lzma
+
+# grub multislot by default
+sys-boot/grub -multislot device-mapper
+
+# for support pastebin.calculate-linux.org
+app-text/wgetpaste -lodgeit-default
+
+# to support the installation of the system
+app-arch/tar xattr
+net-misc/rsync xattr
+sys-apps/coreutils xattr
+sys-fs/squashfs-tools xattr
+
+# support layman sync for portage repositories
+app-portage/layman sync-plugin-portage
+
+net-p2p/rtorrent daemon xmlrpc
+
+# required by app-mobilephone/wammu-0.35
+app-mobilephone/gammu python
+
+# required by media-sound/picard-1.3.1
+media-libs/chromaprint tools
+
+# required by media-radio/fldigi-3.22.05
+x11-libs/fltk xft
+
+# required by net-wireless/aircrack-ng-1.2_rc1-r1::gentoo[airdrop-ng]
+net-wireless/lorcon python
+
+# required by net-wireless/blueman-2.0
+net-dns/avahi autoipd
+
+# Enabled iproute2 support instead of net-tools, enable socks support
+net-misc/openvpn iproute2 socks
+
+# Using instead of bzip2
+app-arch/lbzip2 symlink
+
+# Using instead of gzip
+app-arch/pigz symlink
+
+# Add plugin aria2
+www-client/uget aria2
