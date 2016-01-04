@@ -1,2 +1,2 @@
-# portage
+# overlay
 gentoo portage
